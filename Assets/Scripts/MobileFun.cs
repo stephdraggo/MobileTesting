@@ -4,15 +4,30 @@ using UnityEngine;
 
 public class MobileFun : MonoBehaviour
 {
-    // Start is called before the first frame update
+    #region Variables
+    
+
+    #endregion
+    #region Start
     void Start()
     {
-        
-    }
+        if (Input.touchCount > 0)
+        {
+           Touch touch = Input.GetTouch(0);
+            //touchphase is state of touch (0=started, 1=stationary, 2=moving, 3=ended, 4=errored out)
+        }
 
-    // Update is called once per frame
+        if (SystemInfo.supportsGyroscope)
+        {
+            Input.gyro.enabled = true;
+            Input.gyro.enabled = false;
+        }
+    }
+    #endregion
+    #region Update
     void Update()
     {
-        
+        Gyroscope _gyro = Input.gyro; //do not cache as class variables bc gets overridden
     }
+    #endregion
 }
