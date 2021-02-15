@@ -9,7 +9,7 @@ namespace BUTTer.Mobile
         Horizontal,
         Vertical,
     }
-    public class JoystickInput : MonoBehaviour, IDragHandler,IEndDragHandler,IPointerDownHandler,IPointerUpHandler
+    public class JoystickInput : MonoBehaviour, IDragHandler, IEndDragHandler, IPointerDownHandler, IPointerUpHandler
     {
         #region Variables
         /// <summary>
